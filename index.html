@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skillsX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            color: whitesmoke;
+            /* this font is from google */
+            font-family: 'Poppins';
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+            background-color: rgb(0, 0, 33);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            /* list style none to remove the bullets from the list */
+            /* font sytyle none text decoration(sayed yahi ) none to remove that underline form the link */
+            list-style: none;
+            /* will put margine to each content items */
+            margin: 0 23px;
+
+
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+       
+
+        .right {
+            font-size: 1.5rem;
+        }
+
+        .first {
+            display: flex;
+            margin: 20px 0;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .first>div {
+            width: 30vw;
+        }
+
+        .leftSection {
+
+            font-size: 3rem;
+            text-align: left;
+
+        }
+
+        .rightSection>img {
+            width: 119%;
+            margin: 2px
+        }
+
+        .pu {
+            color: rgb(121, 5, 237);
+        }
+
+        #element {
+            color: gold;
+        }
+
+        .second {
+            max-width: 80vw;
+            margin: auto;
+
+        }
+
+        main hr {
+            color: blue;
+            height: 0.2px;
+            margin: 40px 40px;
+        }
+
+        .second h1 {
+            font-size: 1.5rem;
+        }
+
+        .second form input {
+            width: 50%;
+            margin: 23px 0px;
+            height: 27px;
+            border-radius: 11px;
+            padding: 3px 18px;
+            font-size: 19px;
+            opacity: 0.6;
+            background-color: black;
+            color: white;
+        }
+        nav .bot{
+            width:110px;
+            height: 40px;
+            background: transparent;
+            border:2px solid white;
+            border-radius: 2px;
+            color:white;
+            outline: none;
+            cursor:pointer;
+            font-size:1.1em;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: 5ms;
+        }
+        nav .bot:hover{
+            background-color: white;
+            color:black;
+            /* border: 2px solid black; */
+        }
+        nav a{
+            position: relative;
+            font-size: 1.1em;
+            color: whitesmoke;
+
+        }
+        /* after is bole to action after selection */
+        nav a::after{
+            content: " ";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -6px;
+            height: 3px;
+            background: white;
+            border-radius: 5px;
+            transform:scaleX(0);
+            transition: transform,0.5s;
+
+        } 
+        nav a:hover::after{
+            transform:scaleX(1);
+        }
+    </style>
+</head>
+
+<body ng-app>
+    <header>
+        <nav>
+            <div class="right" ng-app="" ng-init="Name='Adaas'">Welcome to {{Name}}</div>
+            <div class="left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="learn.html">Learn skills</a></li>
+                    
+                    <li><a href="form.html" target="_blank"><button class="bot">Login</button></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="first">
+            <div class="leftSection">
+                <p></p>
+                <div>
+                    You can be <br>
+                    <span id="element"></span>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img id='game' src="dev.png" alt="game">
+            </div>
+        </section>
+        <hr>
+        <section class="second">
+            <h1>What you want to be</h1>
+
+            <div class="box">
+                <form>
+                    <input type="text" placeholder="get your aim">
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>web developer </i> (devlopment)', 'graphic designer', 'video editor ', 'and many more', 'lets go!'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>

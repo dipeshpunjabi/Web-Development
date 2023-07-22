@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100vw;
+            height: 75px;
+        }
+
+
+        main {
+            align-items: center;
+            text-align: center;
+            margin: auto;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            color: whitesmoke;
+            /* this font is from google */
+            font-family: 'Poppins';
+            background-image: url(back.jpg);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+            /* background-color: rgb(0, 0, 33); */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            /* list style none to remove the bullets from the list */
+            /* font sytyle none text decoration(sayed yahi ) none to remove that underline form the link */
+            list-style: none;
+            /* will put margine to each content items */
+            margin: 0 23px;
+
+
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            width: 110px;
+            height: 40px;
+            background: transparent;
+            /* border: 2px solid white; */
+            /* border-radius: 2px; */
+            color: white;
+            outline: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: 5ms;
+            color: white;
+        }
+
+        nav .bot {
+            width: 110px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 2px;
+            color: white;
+            outline: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: 5ms;
+        }
+
+        nav .bot:hover {
+            background-color: white;
+            color: black;
+            /* border: 2px solid black; */
+        }
+
+
+        nav ul li a:hover {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+
+        }
+
+        .right {
+            font-size: 1.5rem;
+        }
+
+        .first {
+            display: flex;
+            margin: 20px 0;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .first>div {
+            width: 30vw;
+        }
+
+        .leftSection {
+
+            font-size: 3rem;
+            text-align: left;
+
+        }
+
+        .rightSection>img {
+            width: 119%;
+            margin: 2px
+        }
+
+        .pu {
+            color: rgb(121, 5, 237);
+        }
+
+        #element {
+            color: gold;
+        }
+
+        .second {
+            max-width: 80vw;
+            margin: auto;
+
+        }
+
+        main hr {
+            color: blue;
+            height: 0.2px;
+            margin: 40px 40px;
+        }
+
+        .second h1 {
+            font-size: 1.5rem;
+        }
+
+        .second form input {
+            width: 50%;
+            margin: 23px 0px;
+            height: 27px;
+            border-radius: 11px;
+            padding: 3px 18px;
+            font-size: 19px;
+            opacity: 0.6;
+            background-color: black;
+            color: white;
+        }
+
+        nav .bot {
+            width: 110px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 2px;
+            color: white;
+
+        }
+
+        nav .bot:hover {
+            background-color: white;
+            color: black;
+            /* border: 2px solid black; */
+        }
+
+        .formbox a {
+            font-style: none;
+            text-decoration: none;
+            color: white;
+        }
+
+        .warrp {
+            margin: auto;
+            margin-top: 35px;
+            position: relative;
+            width: 400px;
+            height: 440px;
+            background: transparent;
+            border: 2px solid whitesmoke;
+            border-radius: 5px;
+            backdrop-filter: blur(3px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .warrp .formbox {
+            width: 100%;
+            padding: 40px;
+        }
+
+        .formbox h2 {
+            font-size: 2em;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        .inputbox {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid whitesmoke;
+            margin: 30px 0;
+        }
+
+        .inputbox label {
+            position: absolute;
+            top: 50px;
+            transform: translateY(-50%);
+            font-weight: 500;
+            pointer-events: stroke;
+
+        }
+
+        .inputbox input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: whitesmoke;
+            font-size: 1.2em;
+
+        }
+
+        .inputbox input:foucs~label,
+        .inputbox input:valid~label {
+            top: -5px
+        }
+
+        .inputbox .icon {
+            position: absolute;
+            right: 8px;
+            font-size: 1.2em;
+            color: yellow;
+            line-height: 57px;
+        }
+
+        .remember-me {
+            font-size: 1em;
+            color: whitesmoke;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bott {
+            accent-color: whitesmoke;
+            margin: 3px;
+            width: 100%;
+            height: 45px;
+            background:transparent;
+            border: whitesmoke 2px solid;
+            border-radius: 2px;
+            color: whitesmoke;
+            font-size: 1em;
+            font-style: Poppins;
+
+        }
+
+        .bott:hover {
+            accent-color: whitesmoke;
+            margin: 3px;
+            width: 100%;
+            height: 45px;
+            background-color: whitesmoke;
+            border-radius: 2px;
+            color: black;
+            transition: 1s;
+            font-size: 1em;
+            font-style: Poppins;
+
+        }
+
+        form a {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        form a:hover {
+            color: whitesmoke;
+            text-decoration: underline;
+        }
+
+        .dont {
+            font-size: 0.9em;
+            color: whitesmoke;
+            text-align: center;
+            justify-content: space-between;
+            margin: 0 0 50px 0;
+        }
+        nav a{
+            position: relative;
+            font-size: 1.1em;
+            color: whitesmoke;
+
+        }
+        /* after is bole to action after selection */
+        nav a::after{
+            content: " ";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -6px;
+            height: 3px;
+            background: white;
+            border-radius: 5px;
+            transform:scaleX(0);
+            transition: transform,0.5s;
+
+        } 
+        nav a:hover::after{
+            transform:scaleX(1);
+        }
+
+        
+    </style>
+</head>
+
+<body ng-app>
+    <header>
+        <nav>
+            <div class="right" ng-app="" ng-init="Name='Adaas'">Welcome to {{Name}}</div>
+            <div class="left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="learn.html">Learn skills</a></li>
+
+                    <li><a href="form.html" target="_blank"><button class="bot">Login</button></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="warrp">
+        <div class="formbox">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="inputbox">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+
+                    <input type="email" placeholder="@gmail.com">
+
+                </div>
+                <div class="inputbox">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" placeholder="password">
+
+                </div>
+                <button type="submit" class="bott">Submit</button>
+                <div class="remember-me">
+                    <label>
+                        <input type="checkbox">Remember-me
+                        <a href="/">Forgot Password</a>
+                    </label>
+
+                </div>
+
+                <div class="dont">Don't have account ?
+                    <a href="re.html">register</a>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

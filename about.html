@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>About</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins;
+            text-align: center;
+            color: whitesmoke;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+
+        .warrap {
+            height: 100vh;
+            width: 100%;
+            background-image: url("img.jpg");
+
+            background-position: center;
+            background-size: cover;
+        }
+
+        .img {
+            height: 200px;
+            width: 250px;
+        }
+
+        .testim {
+            padding: 30px 100px;
+
+        }
+
+        article h1 {
+            font-size: 30px;
+            text-transform: uppercase;
+
+        }
+
+        article h1::after {
+            content: " ";
+            height: 5px;
+            width: 225px;
+            background-color: #fff;
+            display: block;
+            margin: auto;
+        }
+
+        article img {
+            height: 200px;
+            width: 200px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            margin-top: 50px;
+
+        }
+
+        blockquote {
+            font-family: sans-serif;
+            font-size: 1.2em;
+            margin-top: 30px;
+
+        }
+
+        article h5 {
+            font-family: sans-serif;
+            margin-top: 30px;
+            font-size: 37px;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            color: whitesmoke;
+            /* this font is from google */
+            font-family: Poppins;
+        }
+
+        nav .bot:hover {
+            background-color: white;
+            color: black;
+            /* border: 2px solid black; */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+            background-color: rgb(0, 0, 33);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            /* list style none to remove the bullets from the list */
+            /* font sytyle none text decoration(sayed yahi ) none to remove that underline form the link */
+            list-style: none;
+            /* will put margine to each content items */
+            margin: 0 23px;
+
+
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+
+        nav .bot {
+
+            width: 110px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 2px;
+            color: white;
+
+        }
+
+        nav a {
+            position: relative;
+            font-size: 1.1em;
+            color: whitesmoke;
+
+        }
+
+        /* after is bole to action after selection */
+        nav a::after {
+            content: " ";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -6px;
+            height: 3px;
+            background: white;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: transform, 0.5s;
+
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        article .bot {
+
+
+            width: 110px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 2px;
+            color: white;
+
+
+
+        }
+
+        article .bot:hover {
+            background-color: white;
+            color: black;
+            /* border: 2px solid black; */
+        }
+        .warrap .fad{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body ng-app>
+    <header>
+        <nav>
+            <div class="right" ng-app="" ng-init="Name='Adaas'">Welcome to {{Name}}</div>
+            <div class="left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="learn.html">Learn skills</a></li>
+
+                    <li><a href="form.html" target="_blank"><button class="bot">Login</button></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="warrap">
+        <div class="testim">
+            <article>
+                <h1>About me
+                </h1>
+                <img src="wp3837763.webp" alt="near" class="img">
+                <div class="fad"><blockquote id="imp">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque totam veniam minima, aut tempora
+                    molestiae atque aspernatur nihil dicta odit fuga repellat amet cumque? In accusamus quia doloribus
+                    magni aliquid fugit mollitia et?
+                </blockquote></div>
+                <button class="bot" id="bot">Hide</button>
+                <div class="fad1"><blockquote id="impx">
+                    <P><i>our aim</i></P>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque totam veniam minima, aut tempora
+                    molestiae atque aspernatur nihil dicta odit fuga repellat amet cumque? In accusamus quia doloribus
+                    magni aliquid fugit mollitia et?
+                </blockquote></div>
+                <button class="bot" id="bott">Hide</button>
+            </article>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let i=0;
+            let j=0;
+            $('#bot').click(function () {
+                $('#imp').slideToggle(500);
+                if(i==0)
+                {
+                    $('#bot').html('Display')
+                    i=1;
+                }
+                else{
+                    $('#bot').html('hide')
+                    i=0;
+                }
+
+                
+
+            });
+            $('#bott').click(function () {
+                $('#impx').fadeToggle(500);
+                if(j==0)
+                {
+                    $('#bott').html('Display')
+                    j=1;
+                }
+                else{
+                    $('#bott').html('hide')
+                    j=0;
+                }
+
+                
+
+            });
+        });
+    </script>
+</body>
+
+</html>
